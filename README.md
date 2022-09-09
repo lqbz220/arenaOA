@@ -12,6 +12,10 @@ Your solution MAY return a best guess, i.e. pairs which appear at least 50 times
 
 ------
 ## Instruction:
+You need to set up a Node development environment to run this code. 
+Follow the link to install Node.js and Node Package Manager (npm) on your operating system:
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment 
+
 Clone the repo 
 ```
 $ git clone git@github.com:lqbz220/arenaOA.git 
