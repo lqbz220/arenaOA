@@ -13,19 +13,19 @@ Your solution MAY return a best guess, i.e. pairs which appear at least 50 times
 ------
 ## Instruction:
 You need to set up a Node development environment to run this code. 
-Follow the link to install Node.js and Node Package Manager (npm) on your operating system:
+The link explains how to install Node.js and Node Package Manager (npm) on your operating system:
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment 
 
-Clone the repo 
+Clone the repo to your local machine:
 ```
 $ git clone git@github.com:lqbz220/arenaOA.git 
 ```
-To run solution1 and generate csv:
+To run solution1 and generate results in csv:
 ``` 
 $ node solution1.js 
 ```
 
-To run bruteForce solution and generate csv: 
+To run bruteForce solution and generate results in csv: 
 ```
 $ node bruteForce.js 
 ```
