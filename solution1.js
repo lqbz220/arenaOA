@@ -31,7 +31,7 @@ function toCSV(res, outFile) {
 }
 
 //creat a map: key is each artist, value is a set of list indices if the artist showed up in the list
-function countPairs(input,numOccurrences) {
+function countPairs(input, numOccurrences) {
   let map = {};
   let index = 1;
   //loop thru the artists and record which list he/she appeared
@@ -85,7 +85,7 @@ const outFile = "artistPairs-solution1.csv";
 const numOccurrences = 50;
 
 const input = syncReadFile(fileName);
-const map = countPairs(input,numOccurrences);
+const map = countPairs(input, numOccurrences);
 const res = findArtistPairs(map, numOccurrences);
 toCSV(res, outFile);
 

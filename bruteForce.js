@@ -51,7 +51,7 @@ function countPairs(input) {
 }
 
 //if an artist pair appeared at least 50 times, add the pair to the result
-function findArtistPairs(map,numOccurrences){
+function findArtistPairs(map, numOccurrences) {
   let res = [];
   //get all the pairs from the map
   let artistPairs = Object.keys(map);
@@ -70,7 +70,7 @@ const numOccurrences = 50;
 
 const input = syncReadFile(fileName);
 const map = countPairs(input);
-const res = findArtistPairs(map,numOccurrences);
+const res = findArtistPairs(map, numOccurrences);
 toCSV(res, outFile);
 
-module.exports = {countPairs,findArtistPairs};
+module.exports = { countPairs, findArtistPairs };
