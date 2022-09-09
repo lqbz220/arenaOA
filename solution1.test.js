@@ -22,6 +22,7 @@ test('testing countPairs function from solution1',()=>{
         expect(outcome).toBe(true);    
     }
     expect(keys.join(',')).toBe(mapKeys.join(','));
+    console.log('map is created correctly from solution1');
 });
 
 //test the result from the findAristisPairs function 
@@ -32,4 +33,5 @@ test('testing findArtistPairs function from solution1',() =>{
     let value1 = output.sort().join(',');
     let value2 = result.sort().join(',');
     expect(value1).toBe(value2);
+    console.log('results are created correctly from solution1');
 });
