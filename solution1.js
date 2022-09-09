@@ -46,7 +46,7 @@ function countPairs(input,numOccurrences) {
     }
     index += 1;
   }
-  //if an artist appeared less then 50 times, we can ignore he/her
+  //if an artist appeared less than 50 times, we can ignore he/her
   let newMap = {};
   Object.keys(map).forEach((artist) => {
     if (map[artist].size >= numOccurrences) {
@@ -56,7 +56,7 @@ function countPairs(input,numOccurrences) {
   return newMap;
 }
 
-//compare two sets from the map: get the intersect of two sets, if the size of the intersect is at least 50,we found a pair
+//compare two sets from two artists from the map: get the intersect of two sets, if the size of the intersect is at least 50,we found a pair
 function findArtistPairs(newMap, numOccurrences) {
   let res = [];
   let artists = Object.keys(newMap);

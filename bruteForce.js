@@ -53,7 +53,9 @@ function countPairs(input) {
 //if an artist pair appeared at least 50 times, add the pair to the result
 function findArtistPairs(map,numOccurrences){
   let res = [];
+  //get all the pairs from the map
   let artistPairs = Object.keys(map);
+  //check the count of each pair
   for (let pair of artistPairs) {
     if (map[pair] >= numOccurrences) {
       res.push(pair);
