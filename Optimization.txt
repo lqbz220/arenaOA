@@ -1,11 +1,12 @@
 
 Which solution is more optimiazed depends on different situations. 
 
-The worst case, if there are n artitists in each list and m lists, and no artists is the same, then the totoal number of artists is n*m:
-In the brute force solution, the size of the each artists list is n, when we loop thru each artists list to find all pairs,the process takes run time (n)^2*m
-In solution1, there are total n*m artists(if no artists is the same)in the map. When we loop thru all the artists from the map to find the pairs,the process takes run time (n*m)^2*m
-In this situation, brute force solution has less run time than solution 1.
+The worst case, if there are n artitists in each list and m lists, and no artists is the same:
 
-However, more realistically and more likely,the same artists would appear in many lists, the total number of artists is far less than n*m.Plus,after reducing the map size in solution1,it will take
-less run time to go thru all the artists in the map to find the pairs. In this case and more realistically, solution1 is more optimiazed than the brute force solution.
+In the brute force solution, the size of the each artists list is n, when we loop thru each artists list to find all pairs,the process takes run time (n)^2*m
+In solution1, there are total n*m artists in the map(if no artists is the same). When we loop thru all the artists from the map to find the pairs,the process takes run time (n*m)^2*m
+In this situation, brute force solution takes less run time than solution1.
+
+However, more realistically and more likely,the same artists would appear in many lists, the total number of artists is far less than n*m. Plus,after reducing the map size in solution1,it will take
+less run time to go thru all the artists in the map to find the pairs. In this more realistical case, solution1 is more optimiazed than the brute force solution.
 
