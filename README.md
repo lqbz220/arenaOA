@@ -15,16 +15,24 @@ Write a program that, using this file as input, produces an output file containi
 Morrissey,Radiohead\n
 
 Your solution MAY return a best guess, i.e. pairs which appear at least 50 times with high probability, as long as you explain why this tradeoff improves the performance of the algorithm. Please include, either in comments or in a separate file, a brief one-paragraph description of any optimizations you made and how they impact the run-time of the algorithm.
------------------------
+
+------
 Instruction:
-
+To run the code, clone the repo 
+```
 $ git clone git@github.com:lqbz220/arenaOA.git 
-
-To run solution1 and generate csv: 
+```
+To run solution1 and generate csv:
+``` 
 $ node solution1.js 
+```
 
-To run bruteForce and generate csv: 
+To run bruteForce solution and generate csv: 
+```
 $ node bruteForce.js 
-
+```
 Test(test both solutions):
+```
+$ npm install --save-dev jest
 $ npm test
+```
