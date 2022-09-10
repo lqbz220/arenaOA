@@ -1,10 +1,10 @@
 /*
 brute force solution:
-1. Loop thru each list of artists and find all pairs. Create a map using the artists pairs as keys and the count of each pair as corresponding values.
-2. After going thru the whole file and creating the map, find the artists pair with the count of at least 50. These artists pairs are our result 
+1. Loop throught each list of artists and find all pairs. Create a map using the artists pairs as keys and the count of each pair as corresponding values.
+2. After going through the whole file and creating the map, find the artists pair with the count of at least 50. These artists pairs are our result 
 
 Time complexity: O(n^2*m)  n = numbers of artists in each list; m = numbers of lists;
-For each list, finding all pairs takes run time n^2. There are m rows, thus, n^2*m.
+For each list, finding all pairs takes run time n^2. There are m lists, thus, n^2*m.
 
 Space complexity: O(n(n-1)/2*m) n = numbers of artists in each list;  m = numbers of lists
 There are n(n-1)/2 unique pairs from each list and m lists to create the map.
@@ -32,7 +32,7 @@ function toCSV(res, outFile) {
 //create a map to store artist pairs and their counts
 function countPairs(input) {
   let map = {};
-  //loop thru all lists and find all artist pairs; use artist pairs as keys and their count as values in the map
+  //loop through all lists and find all artist pairs; use artist pairs as keys and their count as values in the map
   for (let list of input) {
     let artists = list.split(",");
     //make sure that the artists are unique

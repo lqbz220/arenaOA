@@ -1,14 +1,14 @@
 /*
 Solution1:
-1. Loop thru each list and record the list index where the artist appears. Create a map: key is the artist name, value is a set with the indices of the lists.(use set to avoid repeatedly record the same artist if he/she appears more than once in a list).
+1. Loop through each list and record the list index where the artist appears. Create a map: key is the artist name, value is a set with the indices of the lists.
 2. The size of the set represents how many times the artist appeared,we only want to save the ones with a size over 50.(this step help to decrease the size of map and run time).
 3. We need to compare every two sets in the map. The intersect of twe sets is the overlapping lists of two artists appeared together. So if the size of the intersect is at least 50, we found our result.
 
-Time complexity: O((n*m)^2*m)  n = numbers of artists in each list; m = numbers of lists;
-The worst case, if all artists are different, there are total n*m artists in the map. Finding pairs takes run time (n*m)^2 and comparing two sets takes run time m.
+Time complexity: O(N^2*m)  N = total numbers of artists; m = numbers of lists;
+There are total N artists in the map. Finding pairs takes run time N^2 and comparing two sets takes run time m.
 
-Space complexity: O(n*m) n = numbers of artists in each list;  m = numbers of lists;
-The worst case,creating the hash map uses space n*m
+Space complexity: O(N)  N = total numbers of artists;
+The worst case,creating the hash map uses space 
 */
 
 const fs = require("fs");
@@ -34,7 +34,7 @@ function toCSV(res, outFile) {
 function countPairs(input, numOccurrences) {
   let map = {};
   let index = 1;
-  //loop thru the artists and record which list he/she appeared
+  //loop through the artists and record which list he/she appeared
   for (let list of input) {
     let artists = list.split(",");
     artists = new Set(artists);
@@ -60,7 +60,7 @@ function countPairs(input, numOccurrences) {
 function findArtistPairs(newMap, numOccurrences) {
   let res = [];
   let artists = Object.keys(newMap);
-  //loop thru all artists in newMap
+  //loop through all artists in newMap
   for (let artist1 of artists) {
     for (let artist2 of artists) {
       //if same artists,ignore
