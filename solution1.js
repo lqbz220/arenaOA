@@ -72,11 +72,15 @@ function findArtistPairs(newMap, numOccurrences) {
       let intersect = new Set([...set1].filter((i) => set2.has(i)));
       //if two artists appeared togeting in the same list for at least 50 time, put it to the result
       if (intersect.size >= numOccurrences) {
-        if (res.includes([artist1, artist2])) continue;
-        res.push([artist1, artist2]);
+        //to avoid having the same pair
+        let pair = artist1+','+ artist2;
+        let revsersedPair = artist2+','+ artist1;
+        if (res.includes(pair)|| res.includes(revsersedPair)) continue;
+        res.push(pair);
       }
     }
   }
+  console.log(res)
   return res;
 }
 

@@ -39,11 +39,14 @@ function countPairs(input) {
     artists = new Set(artists);
     for (let artist1 of artists) {
       for (let artist2 of artists) {
+        //to avoid having the same pair
+        let pair = artist1+','+ artist2;
+        let revsersedPair = artist2+','+ artist1;
         if (artist1 === artist2) continue;
-        if (!([artist1, artist2] in map)) {
-          map[[artist1, artist2]] = 0;
+        if (!(pair in map) && !(revsersedPair in map)) {
+          map[pair] = 0;
         }
-        map[[artist1, artist2]] += 1;
+        map[pair] += 1;
       }
     }
   }
@@ -65,7 +68,7 @@ function findArtistPairs(map, numOccurrences) {
 }
 
 const fileName = "artists.txt";
-const outFile = "artistPairs-solution2.csv";
+const outFile = "artistPairs-bruteForce.csv";
 const numOccurrences = 50;
 
 const input = syncReadFile(fileName);
