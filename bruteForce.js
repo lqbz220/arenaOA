@@ -39,14 +39,13 @@ function countPairs(input) {
     artists = new Set(artists);
     for (let artist1 of artists) {
       for (let artist2 of artists) {
-        //to avoid having the same pair
-        let pair = artist1+','+ artist2;
-        let revsersedPair = artist2+','+ artist1;
         if (artist1 === artist2) continue;
-        if (!(pair in map) && !(revsersedPair in map)) {
-          map[pair] = 0;
+        //check the pairs to avoid to have the same pair
+        if (!([artist1, artist2] in map) && !([artist2, artist1] in map)) {
+          map[[artist1, artist2]] = 1;
+        } else if ([artist1, artist2] in map) {
+          map[[artist1, artist2]] += 1;
         }
-        map[pair] += 1;
       }
     }
   }
@@ -57,10 +56,11 @@ function countPairs(input) {
 function findArtistPairs(map, numOccurrences) {
   let res = [];
   //get all the pairs from the map
-  let artistPairs = Object.keys(map);
+  let artists = Object.keys(map);
   //check the count of each pair
-  for (let pair of artistPairs) {
+  for (let pair of artists) {
     if (map[pair] >= numOccurrences) {
+      if (res.includes(pair)) continue;
       res.push(pair);
     }
   }
